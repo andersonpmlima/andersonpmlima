@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('./imagens/darkspace.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100vh;
+}
+section{
+    display: block;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background: linear-gradient(108deg, rgba(54,1,89,0.2) 0%, rgba(84,75,145,0.2) 50%, rgba(93,73,94,0.2) 100%);
+    border-radius: 2%;
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
+
+}
+
+
+#anderson {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(31,8,33);
+}
+
+p, h1 {
+    display: inline-block;
+    color: white;
+    
+    
+}
+
+p {
+    text-align: justify;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+
+button {
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin-top: 17px;
+    border-radius: 50px;
+    border: 3px solid rgb(31,8,33);
+    width: 100%;
+    background: linear-gradient(120deg, rgba(31,8,33,1) 0%, rgba(73,60,82,1) 56%);
+    text-align: left;
+}
+
+button:hover {
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin-top: 17px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 3px solid rgb(238, 236, 236);
+    width: 100%;
+    background: linear-gradient(120deg, rgba(31,8,33,1) 0%, rgba(73,60,82,1) 56%);
+    text-align: left;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+    
+}
+
+
+.icone  {
+    width: 30px;
+    position: absolute;
+    left: 85%;
+    bottom: 15%;
+    border-radius: 50%; 
+    
+}
+
+
+
+@media (min-width: 500px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('./imagens/darkspace.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        height: 95%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section{
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        margin: auto;
+        margin-top: 15px;
+        background: linear-gradient(108deg, rgba(54,1,89,0.2) 0%, rgba(84,75,145,0.2) 50%, rgba(93,73,94,0.2) 100%);
+        border-radius: 2%;
+        padding: 20px;
+        max-width: 500px;
+        max-height: 90%;
+    }
+
+    h1 {
+        float: right;
+        font-size: 30px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        margin-top: 90px;
+    }
+
+    
+
+
+}
