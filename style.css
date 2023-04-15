@@ -4,8 +4,9 @@ body {
     background: url('./imagens/darkspace.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    height: 100%;
+    height: 90%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow:auto;
 }
 
 html{
@@ -88,8 +89,8 @@ button:hover {
     background: linear-gradient(120deg, rgba(31,8,33,1) 0%, rgba(73,60,82,1) 56%);
     text-align: left;
 
-
 }
+
 
 a {
     text-decoration: none;
