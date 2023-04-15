@@ -4,7 +4,7 @@ body {
     background: url('./imagens/darkspace.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    height: 80%;
+    max-height: 90%;
     font-family: Arial, Helvetica, sans-serif;
     overflow:auto;
 }
