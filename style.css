@@ -1,160 +1,201 @@
 body {
     margin: 0;
     padding: 0;
-    position: absolute;
-    background: url('./imagens/darkspace.jpg');
+    background-image: url('./imagens/back.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    max-height: 90%;
+    background-color: rgb(66, 66, 66);
     font-family: 'Encode Sans Condensed', sans-serif;
-    overflow:hidden;
 }
 
-html{
+html {
     height: 100vh;
+    
 }
-section{
-    display: block;
-    position: relative;
-    margin: auto;
-    box-sizing: border-box;
-    margin-top: 20px;
-    background: linear-gradient(108deg, rgba(54,1,89,0.2) 0%, rgba(84,75,145,0.2) 50%, rgba(93,73,94,0.2) 100%);
-    border-radius: 2%;
+
+container {
+    display:block;
     padding: 10px;
-    max-width: 90%;
-    max-height: 90%;
-
+    margin: 10px auto 0  auto;
+    color: rgb(0, 0, 0);
+    height: 90%;
+    width: 450px;
+    /* border-radius: 10px; */
+    box-shadow: -6px 6px rgb(31,8,33);
+    background-color: rgba(255, 255, 255, 1);
 }
-
 
 #anderson {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
+    margin: 10px 0 0 10px ;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgb(31,8,33);
-}
-
-p, h1 {
-    display: inline-block;
-    color: white;
-    
-    
-    
+    background: rgb(59,35,68);
+    background: linear-gradient(293deg, rgba(59,35,68,1) 39%, rgba(164,39,172,1) 100%);
 }
 
 p {
-    text-align: left;
     font-size: 1.2em;
-    font-weight: 200;
-    padding: 10px;
-    width: 95%;
-    margin-bottom: 0px;
+    font-weight: 500;
+    margin: 0 25px 0 10px;
+    /* width: 90%; */
+    text-align: justify;
+
 }
 
 h1 {
-    font-size: 2.2em;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: -20px;
-    font-weight: 500;
+    font-size: 2em;
+    margin: 10px 0 20px 10px;
 }
-
-ul {
-    display: block;
-    list-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 20px;
+.list {
+    display: flex;
+    /* background-color: aquamarine; */
+    flex-direction: column;
+    margin: 20px 5px 10px 5px;
     padding: 0;
+    gap: 1em;
+    list-style: none;
+    
+    
 }
 
-
-button {
-    display: block;
-    position: relative;
-    padding: 10px;
-    margin-top: 17px;
-    border-radius: 50px;
-    border: 3px solid rgb(31,8,33);
-    width: 100%;
-    background: linear-gradient(120deg, rgba(31,8,33,1) 0%, rgba(73,60,82,1) 56%);
-    text-align: left;
-}
-
-button:hover {
-    display: block;
-    position: relative;
-    padding: 10px;
-    margin-top: 17px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    border: 3px solid rgb(238, 236, 236);
-    width: 100%;
-    background: linear-gradient(120deg, rgba(31,8,33,1) 0%, rgba(73,60,82,1) 56%);
-    text-align: left;
-
-}
-
-
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-
+.listpequeno {
+    display: flex;
+   /*  background-color: aquamarine; */
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 15px 10px 0px -10px;
+    padding: 0px;
+    list-style: none;
     
 }
 
 
-.icone  {
+.iconepequeno {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    object-fit:contain;
+    border-radius: 50%;
+    border: 2px solid rgb(31,8,33);
+
+}
+
+.iconepequeno:hover {
+    display: flex;
+    align-items: center;
+    height: 33px;
+    object-fit:contain;
+    border-radius: 50%;
+
+}
+
+.listitempequeno {
+    display: flex;
+    height: 1em;
+    padding: 0px;
     width: 30px;
-    position: absolute;
-    left: 85%;
-    bottom: 15%;
-    border-radius: 50%; 
-    
+    margin: 10px 15px 10px 0px;
+
+}
+
+.listitem {
+    display: flex;
+    font-size: 1.2em;
+    height: 3em;
+    /* border-radius: 2em; */
+    box-shadow: -4px 4px rgba(31,8,33, 1);
+   /*  border: 3px solid rgb(31,8,33); */
+    background: rgb(59,35,68);
+    background: linear-gradient(293deg, rgba(59,35,68,1) 39%, rgba(164,39,172,1) 100%);
+
 }
 
 
 
-@media (min-width: 500px) {
+.icone {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    object-fit:contain;
+    border-radius: 50%;
+    border: 1px solid rgb(31,8,33);
 
-    body {
-        margin: 0;
-        padding: 0;
-        position:relative;
-        background: url('./imagens/darkspace.jpg');
-        background-size: cover;
-        background-repeat:no-repeat;
-        height: 95%;
-        font-family: 'Encode Sans Condensed', sans-serif;
-    }
+}
 
-    section{
-        display: block;
-        box-sizing: border-box;
-        position: relative;
-        margin: auto;
-        margin-top: 15px;
-        background: linear-gradient(108deg, rgba(54,1,89,0.2) 0%, rgba(84,75,145,0.2) 50%, rgba(93,73,94,0.2) 100%);
-        border-radius: 2%;
-        padding: 20px;
-        max-width: 500px;
-        max-height: 90%;
-    }
+.icone:hover {
+    display: flex;
+    height: 33px;
+    object-fit: cover;
+    border-radius: 50%;
 
-    h1 {
-        float: right;
-        font-size: 2.2em;
-        font-weight: 500;
-        margin-right: 10px;
-        margin-bottom: 0px;
-        margin-top: 90px;
-    }
+}
 
+.link {
+    display: flex;
+    padding: 0 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    text-decoration: none;
+}
+
+.link:hover {
+    display: flex;
+    padding: 0 20px;
+    color: white;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-grow: 1;
+    text-decoration: none;
     
+}
+
+.listitem:hover {
+    display: flex;
+    font-size: 1.2em;
+    height: 3em;
+    /* border-radius: 2em; */
+    box-shadow: -4px 4px 3px rgba(31,8,33, 1);
+   /*  border: 3px solid rgb(31,8,33); */
+    background: rgb(59,35,68);
+    background: linear-gradient(293deg, rgba(59,35,68,1) 39%, rgba(164,39,172,1) 100%);
 
 
+}
+
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
+    width: 100%;
+    height: 2vh;
+    padding: 10px;
+    /* background-color: white; */
+}
+
+footer > p {
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 500px) {
+
+    container {
+        display:block;
+        padding: 10px;
+        margin: 10px auto 0  auto;
+        color: rgb(0, 0, 0);
+        height: 90%;
+        width: 85vw;
+        box-shadow: -6px 6px rgb(31,8,33);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
 }
