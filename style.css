@@ -84,7 +84,7 @@ h1 {
 
 }
 
-.iconepequeno:hover {
+.iconepequeno:hover, .iconepequeno:active {
     display: flex;
     align-items: center;
     height: 35px;
@@ -128,7 +128,7 @@ h1 {
 
 }
 
-.icone:hover {
+.icone:hover, .icone:active {
     display: flex;
     height: 35px;
     object-fit: cover;
@@ -147,7 +147,7 @@ h1 {
     text-decoration: none;
 }
 
-.link:hover {
+.link:hover, .link:active {
     display: flex;
     padding: 0 20px;
     color: white;
@@ -160,7 +160,7 @@ h1 {
     
 }
 
-.listitem:hover {
+.listitem:hover, .listitem:active {
     display: flex;
     font-size: 1.4em;
     height: 2.60em;
@@ -170,7 +170,6 @@ h1 {
     background: rgb(59,35,68);
     background: linear-gradient(293deg, rgba(59,35,68,1) 39%, rgba(164,39,172,1) 100%);
     transition: 0.4s;
-
 
 }
 
