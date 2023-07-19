@@ -54,17 +54,19 @@ function hideScrollArrow() {
         arrowBtn.style.animationDuration = "0.8s"
         arrowBtn.style.animationDelay = "-0.2s"
         arrowBtn.style.animationFillMode = "forwards"
+        arrowBtn.style.animationDirection = "normal"
         arrowBtn.style.animationIterationCount = "1"
       } else {
         
         arrowBtn.style.animationDelay = "-0.5s"
-        arrowBtn.style.animationName = "arrow-fade-out"
+        arrowBtn.style.animationName = "arrow-fade"
         arrowBtn.style.animationDuration = "0.7s"
         arrowBtn.style.animationFillMode = "forwards"
+        arrowBtn.style.animationDirection = "reverse"
         arrowBtn.style.animationIterationCount = "1"
       }
 
-      if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+      if ((window.innerHeight + window.scrollY) >= (document.body.scrollHeight)-30) {
         arrowBtn.style.animationName = "arrow-up"
         arrowBtn.style.animationDuration = "0.8s"
         arrowBtn.style.animationDelay = "-0.2s"
@@ -215,6 +217,8 @@ function darkModeF() {
 function langEn() {
     let text = document.getElementById("text")
     let title = document.getElementById("title")
+    let mobileDiv = document.getElementById("mobile-text")
+
     
     text.style.animationName = "translate"
     text.style.animationDuration = "0.5s"
@@ -223,21 +227,43 @@ function langEn() {
     title.innerHTML = `Hello, world<span id="dot" class="dot">|</span>`
     text.innerHTML = `<span>🧑‍💻</span> Front End Developer;<br>
     <span>&#x1F4D6</span> 27 years, six months studying;<br>
-    <span>&#x1F524</span> Knowledge in HTML, CSS, Javascript, jQuery e Bootstrap;<br>
+    <span>&#x1F524</span> Knowledge in HTML, CSS, Javascript, jQuery and Bootstrap;<br>
     <span>&#x26BD</span> Passionate about sports and technology;<br>
     <span>&#x1F44B</span> Seeking the first opportunity in the market;`
+
+
+    if(window.matchMedia("(orientation: portrait)").matches && window.innerWidth <= 767){
+        
+    mobileDiv.style.animationName = "translate"
+    mobileDiv.style.animationDuration = "0.5s"
+    mobileDiv.style.animationName = "translate"
+    mobileDiv.style.animationDuration = "0.5s"
+    mobileDiv.innerHTML = `<h3 class="text-mobile"><span>🧑‍💻</span> Front End Developer;<br><hr>
+    <span>&#x1F4D6</span> 27 years, six months studying;<br><hr>
+    <span>&#x1F524</span> Knowledge in HTML, CSS, Javascript, jQuery and Bootstrap;<br><hr>
+    <span>&#x26BD</span> Passionate about sports and technology;<br><hr>
+    <span>&#x1F44B</span> Seeking the first opportunity in the market;<hr><h3>`
+    clearInterval(intervalCheck)
+    }
+
 
     setTimeout(()=>{
         text.style.animationName = ""
         text.style.animationDuration = ""
         title.style.animationName = ""
         title.style.animationDuration = ""
+
+        mobileDiv.style.animationName = ""
+        mobileDiv.style.animationDuration = ""
+        mobileDiv.style.animationName = ""
+        mobileDiv.style.animationDuration = ""
     }, 500)
 }
 
 function langPt() {
     let text = document.getElementById("text")
     let title = document.getElementById("title")
+    let mobileDiv = document.getElementById("mobile-text")
 
     title.innerHTML = `Olá, mundo<span id="dot" class="dot">|</span>`
     text.innerHTML = `<span>🧑‍💻</span> Desenvolvedor Front End;<br>
@@ -245,29 +271,45 @@ function langPt() {
     <span>&#x1F524</span> Conhecimentos em HTML, CSS, Javascript, jQuery e Bootstrap;<br>
     <span>&#x26BD</span> Apaixonado por esportes e tecnologia;<br>
     <span>&#x1F44B</span> Buscando a primeira oportunidade no mercado;`
+    if(window.matchMedia("(orientation: portrait)").matches && window.innerWidth <= 767){
+
+        mobileDiv.innerHTML = `<h3 class="text-mobile"><span>🧑‍💻</span> Desenvolvedor Front End;<br><hr>
+        <span>&#x1F4D6</span> 27 anos, estudante de programação há 6 meses;<br><hr>
+        <span>&#x1F524</span> Conhecimentos em HTML, CSS, Javascript, jQuery e Bootstrap;<br><hr>
+        <span>&#x26BD</span> Apaixonado por esportes e tecnologia;<br><hr>
+        <span>&#x1F44B</span> Buscando a primeira oportunidade no mercado;<hr>
+         </h3>`
+
+         clearInterval(intervalCheck)
+    }
+   
+
+
 }
 
 /* MOBILE VIEW*/
 
-setInterval( ()=>{
+const intervalCheck = setInterval(()=>{
 
     let text = document.getElementById("text-title")
     let mobileDiv = document.getElementById("mobile-text")
-    if(window.matchMedia("(orientation: portrait)").matches && window.innerWidth <= 767){
+    if(window.matchMedia("(orientation: portrait)").matches && window.innerWidth <= 1022){
     
         mobileTextF()
     } else {
         text.style.display = ""
         mobileDiv.innerHTML = ""
     }
-}, 100)
+},100)
+    
+
 
 function mobileTextF() {
     let text = document.getElementById("text-title")
     let mobileDiv = document.getElementById("mobile-text")
 
         text.style.display = "none"
-        mobileDiv.innerHTML = `<hr><h3 class="text-mobile"><span>🧑‍💻</span> Desenvolvedor Front End;<br><hr>
+        mobileDiv.innerHTML = `<h3 class="text-mobile"><span>🧑‍💻</span> Desenvolvedor Front End;<br><hr>
         <span>&#x1F4D6</span> 27 anos, estudante de programação há 6 meses;<br><hr>
         <span>&#x1F524</span> Conhecimentos em HTML, CSS, Javascript, jQuery e Bootstrap;<br><hr>
         <span>&#x26BD</span> Apaixonado por esportes e tecnologia;<br><hr>
@@ -276,23 +318,6 @@ function mobileTextF() {
 
 }
 
-/* mobileOpts()
-
-function mobileOpts() {
-    let options = document.getElementById("options")
-    let hitbox = document.getElementById("hitbox")
-
-    if (options.style.left = "-220px") {
-        
- 
-    } if(options.style.left = "-40px") {
-        hitbox.addEventListener("click", ()=>{
-            options.style.left = "-220px"
-        })
-
-        
-    }
-} */
 
 if(window.matchMedia("(orientation: portrait)").matches && window.innerWidth <= 767) {
     let options = document.getElementById("options")

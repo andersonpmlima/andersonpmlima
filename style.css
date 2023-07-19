@@ -8,6 +8,8 @@ body {
     font-family: 'Dosis', sans-serif;
     background: rgb(44,30,80);
     background: linear-gradient(138deg, rgba(44,30,80,1) 0%, rgba(22,1,27,1) 100%);
+    height: 100%;  
+    width: 100%;
 }
 
 body::-webkit-scrollbar{
@@ -145,8 +147,8 @@ ul {
 .big-container-light {
     padding: 0;
     margin: 0;
-    background: rgb(255,255,255);
-background: linear-gradient(350deg, rgba(255,255,255,1) 20%, rgb(85, 100, 129) 100%);
+    background: rgba(191,165,198,1);
+    /* background: linear-gradient(350deg, rgb(219, 216, 216) 20%, rgb(212, 212, 212) 100%); */
     height: 100%;
     width: 100%;
     display: flex;
@@ -196,7 +198,7 @@ background: linear-gradient(350deg, rgba(255,255,255,1) 20%, rgb(85, 100, 129) 1
     display: flex;
     margin: 10vh 0 10vh 0;
     background: rgb(238,238,238);
-    background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%);
+    /* background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%); */
     box-shadow: 0px 4px 8px 1px #000000;
     height: 75vh;
     width: 75vw;
@@ -344,8 +346,8 @@ background: linear-gradient(350deg, rgba(255,255,255,1) 20%, rgb(85, 100, 129) 1
     position: absolute;
     top:10vh;
     margin: 0vh 0 10vh 0;
-    background: rgb(238,238,238);
-    background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%);
+    background: rgba(191,165,198,1);
+  /*   background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%); */
     box-shadow: 0px 4px 8px 1px #000000;
     border-radius: 5px;
     height: 78vh;
@@ -378,12 +380,25 @@ footer {
     top: 5vh;
     bottom: 0;
     direction: 0;
-    align-self: baseline;
+    align-self: flex-end;
     background-color: #0b000f;
     box-shadow: inset 0 1px 5px 0px #000000;
     width: 100vw;
-    height: 25vh;
+    height: 10vh;
 }
+
+footer > p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: clamp(10px, 20px, 30px);
+}
+
 
 
 /* KEYFRAMES ANIMATIONS */
@@ -484,7 +499,7 @@ footer {
 
 /* MOBILE */
 
-@media screen and (max-width: 767px) and (min-width:376px) {
+@media screen and (max-width: 1023px) and (min-width:376px) {
     #card {
         display: grid;
         grid-template-columns: 1fr;
@@ -496,7 +511,7 @@ footer {
         margin-right: -50%;
         transform: translate(-50%, -10%);
         width: 90vw;
-        height: 90vh;
+        height: 87vh;
         background: rgb(13,1,17);
         background: linear-gradient(120deg, rgba(13,1,17,1) 42%, rgba(25,22,28,1) 100%);
         border-radius: 5px;
@@ -504,7 +519,7 @@ footer {
         z-index: 98;
     }
     #photo {
-        padding: 30px;
+        padding: 20px;
         display: flex;
         align-content: center;
         justify-content: center;
@@ -516,8 +531,8 @@ footer {
         background: rgb(57,4,75);
         background: linear-gradient(293deg, rgba(57,4,75,1) 42%, rgba(161,0,63,1) 100%);
         display: flex;
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         object-fit: cover;
         border-radius: 54% 46% 24% 76% / 42% 63% 37% 58% ;
         box-shadow: 0px 1px 10px 2px #200231;
@@ -525,7 +540,7 @@ footer {
    
     .my-name {
         position: relative;
-        margin: auto auto auto auto;
+        margin: -10px auto auto auto;
         left: 0;
         transform: translateX(0);
         text-align: center;
@@ -538,13 +553,13 @@ footer {
     #arrow-down {
         display: flex;
         width: 40px;
-        scale: 3;
+        scale: 2.5;
         transition: all 1s;   
     }
     #arrow-btn {
         position: fixed;
         transform: translateX(0, -50%);
-        top: 90vh;
+        top: 85vh;
         color: #eee;
         padding: 20px;
         width: 40px;
@@ -577,7 +592,7 @@ footer {
         align-items: center;
         justify-content: center;
         z-index: 99;
-        top: 95%;
+        top: 94%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
@@ -597,8 +612,8 @@ footer {
         position: absolute;
         top:10vh;
         margin: 0vh 0 10vh 0;
-        background: rgb(238,238,238);
-        background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%);
+        background: rgba(191,165,198,1);
+       /*  background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%); */
         box-shadow: 0px 4px 8px 1px #000000;
         border-radius: 5px;
         height: 78vh;
@@ -629,16 +644,16 @@ footer {
         z-index: 89;
     }
     #gear {
-        top:17px;
-        margin-left: 2px;
+        top:13px;
+        margin-left: -3px;
         color: #eee;
         position: absolute;
         display: inline;
         z-index: 80;
         animation-name: gear;
         animation-iteration-count: infinite;
-        animation-duration: 1s;
-        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
     }
     #options {
         position: absolute;
@@ -766,7 +781,7 @@ footer {
         z-index: 98;
     }
     #photo {
-        padding: 30px;
+        padding: 20px;
         display: flex;
         align-content: center;
         justify-content: center;
@@ -778,8 +793,8 @@ footer {
         background: rgb(57,4,75);
         background: linear-gradient(293deg, rgba(57,4,75,1) 42%, rgba(161,0,63,1) 100%);
         display: flex;
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         border-radius: 54% 46% 24% 76% / 42% 63% 37% 58% ;
         box-shadow: 0px 1px 10px 2px #200231;
@@ -787,7 +802,7 @@ footer {
    
     .my-name {
         position: relative;
-        margin: -15px auto auto auto;
+        margin: -25px auto auto auto;
         left: 0;
         transform: translateX(0);
         text-align: center;
@@ -800,13 +815,13 @@ footer {
     #arrow-down {
         display: flex;
         width: 40px;
-        scale: 3;
+        scale: 2;
         transition: all 1s;   
     }
     #arrow-btn {
         position: fixed;
         transform: translateX(0, -50%);
-        top: 90vh;
+        top: 85vh;
         color: #eee;
         padding: 20px;
         width: 40px;
@@ -839,7 +854,7 @@ footer {
         align-items: center;
         justify-content: center;
         z-index: 99;
-        top: 95%;
+        top: 93%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
@@ -858,8 +873,8 @@ footer {
         position: absolute;
         top:10vh;
         margin: 0vh 0 10vh 0;
-        background: rgb(238,238,238);
-        background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%);
+        background: rgba(191,165,198,1);
+        /* background: linear-gradient(138deg, rgba(238,238,238,1) 0%, rgba(191,165,198,1) 100%); */
         box-shadow: 0px 4px 8px 1px #000000;
         border-radius: 5px;
         height: 78vh;
@@ -881,11 +896,6 @@ footer {
     }
 }
 
-/* TABLET */
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-}
 
 /* FULL HD DESKTOP*/
 
@@ -979,7 +989,17 @@ footer {
         text-align: left;
         font-size: 25px;
     }
-    
+    footer {
+        position: relative;
+        top: 10vh;
+        bottom: 0;
+        direction: 0;
+        align-self: flex-end;
+        background-color: #0b000f;
+        box-shadow: inset 0 1px 5px 0px #000000;
+        width: 100vw;
+        height: 10vh;
+    }
 }
 
 /* ULTRA WIDE DESKTOP */
@@ -1004,27 +1024,27 @@ footer {
     
     .container1-light {
         
-        height: 60vh;
+        height: 65vh;
         width: 45vw;
         z-index: 96;
     }
     .container1 {
 
-        height: 60vh;
+        height: 65vh;
         width: 45VW;
         z-index: 96;
     }
     .container2-light {
         top:0vh;
         margin: 10vh 0 10vh 0;
-        height: 48vh;
+        height: 58vh;
         width: 43vw;
         z-index: 75;
     }
     .container2 {
         top: 0vh;
         margin: 10vh 0 10vh 0;
-        height: 48vh;
+        height: 58vh;
         width: 43vw;
         z-index: 75;
     }
@@ -1061,18 +1081,30 @@ footer {
     }
     
     .text-light {
+        padding-right: 100px;
         margin: 30px 0 0px 150px;
         font-weight: 300;
         color: rgb(26, 0, 36);
         text-align: left;
-        font-size: 25px;
+        font-size: 30px;
     }
     .text {
-        margin: 30px 0 0px 150px;
+        padding-right: 100px;
+        margin: 30px 0 0 150px;
         font-weight: 100;
         color: white;
         text-align: left;
-        font-size: 25px;
+        font-size: 30px;
     }
-    
+    footer {
+        position: relative;
+        top: 10vh;
+        bottom: 0;
+        direction: 0;
+        align-self: flex-end;
+        background-color: #0b000f;
+        box-shadow: inset 0 1px 5px 0px #000000;
+        width: 100vw;
+        height: 10vh;
+    }
 }
